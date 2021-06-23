@@ -13,7 +13,7 @@
     "test:e2e": "npm run generate-demo && with-server 'cd demo && jest'",
     "start": "open-api-mocker -p $PORT -s demo/petstore.json",
     "generate-demo": "npm run prepare && ./lib/codegen/cli.js ./demo/petstore.json ./demo/api.ts && ./lib/codegen/cli.js --optimistic ./demo/petstore.json ./demo/optimisticApi.ts && prettier -w demo",
-    "prepare": "npm run build && chmod +x ./lib/codegen/cli.js"
+    "prepare": "npm run build && chmod +x ./lib/codegen/cli.js && husky install"
   },
   "keywords": [
     "openapi",
@@ -29,7 +29,7 @@
     "@types/minimist": "^1.2.0",
     "@types/node": "^15.12.4",
     "form-data": "^4.0.0",
-    "husky": "^4.2.5",
+    "husky": "^6.0.0",
     "jest": "^27.0.5",
     "lint-staged": "^11.0.0",
     "node-fetch": "^2.6.0",
@@ -46,11 +46,6 @@
     "minimist": "^1.2.5",
     "swagger2openapi": "^6.2.3",
     "typescript": "^4.1.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{ts,js,json,md}": "prettier --write"
