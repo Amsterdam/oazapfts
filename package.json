@@ -30,7 +30,7 @@
     "@types/node": "^15.12.4",
     "form-data": "^4.0.0",
     "husky": "^4.2.5",
-    "jest": "^26.4.2",
+    "jest": "^27.0.5",
     "lint-staged": "^11.0.0",
     "node-fetch": "^2.6.0",
     "open-api-mocker": "1.7.x",
